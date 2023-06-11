@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PorFolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+        'hero-pattern': "url('/images/background.webp')",}
+      }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="bg-white p-3 sticky top-0 z-40 shadow-2xl">
+    <div class=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-centerlg: ml-32">
+          <a href="#" class="text-block text-2xl font-bold italic">Mery</a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4 lg:mr-32">
+            <a href="#"
+              class="hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#INTRODUCTION"
+              class="hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="#SERVICE"
+              class="hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="#CONTACT"
+              class="hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button type="button" class="toggle-button text-gray-200 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
+              <path fill-rule="evenodd" d="M2 4.75C2 4.33579 2.33579 4 2.75 4H17.25C17.6642 4 18 4.33579 18 4.75C18 5.16421 17.6642 5.5 17.25 5.5H2.75C2.33579 5.5 2 5.16421 2 4.75ZM2.75 9.5C2.33579 9.5 2 9.83579 2 10.25C2 10.6642 2.33579 11 2.75 11H17.25C17.6642 11 18 10.6642 18 10.25C18 9.83579 17.6642 9.5 17.25 9.5H2.75ZM17.25 14.5C17.6642 14.5 18 14.8358 18 15.25C18 15.6642 17.6642 16 17.25 16H2.75C2.33579 16 2 15.6642 2 15.25C2 14.8358 2.33579 14.5 2.75 14.5H17.25Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="mobile-menu hidden">
+      <div class="px-2 mx-4 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+      </div>
+    </div>
+
+    <script>
+      // Toggle mobile menu
+      const toggleMenu = () => {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.querySelector('.toggle-button');
+        toggleButton.addEventListener('click', toggleMenu);
+      });
+    </script>
+
+  </nav>
+
+  <!-- ***************************NAME -->
+  <div class="bg-black p-4 lg:p-60 text-white">
+    <h2 class="text-5xl font-bold" id="name">Hello, I’m <span class="italic">Meryem ElFadil</span></h2>
+    <span class="title text-6xl font-bold">Web Developer</span>
+  </div>
+  <script>
+    // Array of colors
+    const colors = ["red", "green", "blue", "yellow", "purple"];
+
+    // Function to change the color every 5 seconds
+    function changeColor() {
+      const nameElement = document.getElementById("name");
+      const spanElement = nameElement.querySelector("span");
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      spanElement.style.color = randomColor;
+    }
+
+    // Call the function initially
+    changeColor();
+    // Call the function every 5 seconds
+    setInterval(changeColor, 1000);
+  </script>
+
+  <!-- ********************INTRODUCTION -->
+  <div class="p-5" id="INTRODUCTION"></div>
+  <div id="INTRODUCTION" class="lg:flex justify-center m-20 text-white">
+    <div class="border border-gray-500">
+      <img class="drop-shadow-2xl" alt="img" width="300" height="300" src="/img.jpeg" />
+    </div>
+    <div class="w-full lg:w-96 ml-10 space-y-6 bg-black p-5">
+      <h1 class="text-2xl font-bold italic">HELLO</h1>
+      <p>Lauréat de la licence professionnelle de la Estc casablanca. Dynamique et rigoureuse passionnée par Le domaine d’informatique (Developpement & système d’information). Polyvalente et chercheuse dans le monde du développement. Je m’autoforme pour acquérir les derniers techniques web.</p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th class="px-6 py-3 bg-gray-600 text-left text-xs font-medium text-white uppercase tracking-wider">Name</th>
+              <!-- <th class="px-6 py-3 bg-black text-left text-xs font-medium text-white uppercase tracking-wider">Age</th> -->
+              <th class="px-6 py-3 bg-gray-600 text-left text-xs font-medium text-white uppercase tracking-wider">Email</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap text-black">Meryem ELFADIL</td>
+              <!-- <td class="px-6 py-4 whitespace-nowrap">22 years old</td> -->
+              <td class="px-6 py-4 whitespace-nowrap text-black">maryamfadil123@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-8">
+        <a href="/MonCV.pdf" download class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ********************* SERVICE-->
+  <div id="SERVICE" class="p-10"></div>
+  <div  class="service bg-black lg:p-32 p-6 mt-6 mb-6">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-6">OUR SERVICES</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
+        <div class="card bg-white shadow-md  text-center p-6 hover:bg-gray-200 rounded-xl">
+          <h5 class="text-xl font-bold mb-4 ">Web Development</h5>
+          <p class="text-gray-700 ">Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be as fast as possible.</p>
+        </div>
+        <div class="card bg-white shadow-md p-6  text-center hover:bg-gray-200 rounded-xl">
+          <h5 class="text-xl font-bold mb-4">Web Design</h5>
+          <p class="text-gray-700 ">Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be as fast as possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- **********ContactME -->
+  <div id="CONTACT" class="p-24">
+    <section class="py-8">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+        <div class="max-w-md mx-auto">
+          <p class="text-center">You can reach out to me via email:</p>
+          <p class="text-center text-blue-500 font-bold">
+            <a href="mailto:maryamfadil123@gmail.com">maryamfadil123@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <!-- ****************FOOTER -->
+  <footer class="bg-black text-white py-4 ">
+  <div class="container mx-auto text-center p-24">
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </div>
+</footer>
+
+  
+  
+
+
+
+</body>
+
+</html>
